@@ -1,33 +1,25 @@
 ﻿using Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task_2
 {
-    class Rectangle
+    public class Rectangle
     {
-        Coordinate LeftUpCoord;
-        Coordinate RightDownCoord;
+        private Coordinate leftUpCoord;
+        private Coordinate rightDownCoord;
 
-        public Rectangle(Coordinate LeftUpCoord, Coordinate RightDownCoord)
+        public Rectangle(Coordinate leftUpCoord, Coordinate rightDownCoord)
         {
-            this.LeftUpCoord = LeftUpCoord;
-            this.RightDownCoord = RightDownCoord;
+            this.leftUpCoord = leftUpCoord;
+            this.rightDownCoord = rightDownCoord;
         }
-
-        private double perimetr;
-        private double square;
 
         public double Perimetr
         {
             get
             {
                 Tuple<double, double> twoSide = CountTwoSides();
-                perimetr = 2 * twoSide.Item1 + 2 * twoSide.Item2;
-                return perimetr;
+                return 2 * twoSide.Item1 + 2 * twoSide.Item2;
             }
         }
 
@@ -36,18 +28,17 @@ namespace Task_2
             get
             {
                 Tuple<double, double> twoSide = CountTwoSides();
-                square = twoSide.Item1 * twoSide.Item2;
-                return square;
+                return twoSide.Item1 * twoSide.Item2;
             }
         }
 
-        public Tuple<double, double> CountTwoSides()
+        private Tuple<double, double> CountTwoSides()
         {
-            double oneSide = MathHelper.SquareRoot((RightDownCoord.X - LeftUpCoord.X) * (RightDownCoord.X - LeftUpCoord.X) +
-                (LeftUpCoord.Y - LeftUpCoord.Y) * (LeftUpCoord.Y - LeftUpCoord.Y));
+            double oneSide = MathHelper.SquareRoot((rightDownCoord.X - leftUpCoord.X) * (rightDownCoord.X - leftUpCoord.X) +
+                (leftUpCoord.Y - leftUpCoord.Y) * (leftUpCoord.Y - leftUpCoord.Y));
 
-            double secondSide = MathHelper.SquareRoot((LeftUpCoord.X - LeftUpCoord.X) * (LeftUpCoord.X - LeftUpCoord.X) +
-                (RightDownCoord.Y - LeftUpCoord.Y) * (RightDownCoord.Y - LeftUpCoord.Y));
+            double secondSide = MathHelper.SquareRoot((leftUpCoord.X - leftUpCoord.X) * (leftUpCoord.X - leftUpCoord.X) +
+                (rightDownCoord.Y - leftUpCoord.Y) * (rightDownCoord.Y - leftUpCoord.Y));
 
             Tuple<double, double> twoSides = new Tuple<double, double>(oneSide, secondSide);
 

@@ -1,15 +1,11 @@
 ﻿using Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task_4
 {
     public static class Rectangle
     {
-        public static Tuple<double, double> CountTwoSides(Coordinate LeftUpCoord, Coordinate RightDownCoord)
+        private static Tuple<double, double> CountTwoSides(Coordinate LeftUpCoord, Coordinate RightDownCoord)
         {
             double oneSide = MathHelper.SquareRoot((RightDownCoord.X - LeftUpCoord.X) * (RightDownCoord.X - LeftUpCoord.X) +
                 (LeftUpCoord.Y - LeftUpCoord.Y) * (LeftUpCoord.Y - LeftUpCoord.Y));

@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task_3
+﻿namespace Task_3
 {
-    class Circle
+    public class Circle
     {
-        const double Pi = 3.14159265359;
+        private const double Pi = 3.14159265359;
 
         public double Square(double radius)
         {

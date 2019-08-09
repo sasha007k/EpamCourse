@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task_5
+﻿namespace Task_5
 {
-    class ComplexNumber
+    public class ComplexNumber
     {
         #region Fields
         private double real;
@@ -21,7 +15,7 @@ namespace Task_5
         }
         #endregion
 
-        #region Methods
+        #region Overloaded operators
         public static ComplexNumber operator *(ComplexNumber c1, ComplexNumber c2)
         {
             return new ComplexNumber(c1.real * c2.real, c1.imaginary * c2.imaginary);
@@ -31,7 +25,9 @@ namespace Task_5
         {
             return new ComplexNumber(c1.real / c2.real, c1.imaginary / c2.imaginary);
         }
+        #endregion
 
+        #region Methods
         public override string ToString()
         {
             return "Real = " + real + "   imaginary = " + imaginary;

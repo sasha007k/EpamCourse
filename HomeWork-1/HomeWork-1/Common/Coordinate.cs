@@ -1,21 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common
+﻿namespace Common
 {
     public class Coordinate
     {
-        public int X { get; set; }
-        public int Y { get; set; }
-
-        public Coordinate()
-        {
-            X = 0;
-            Y = 0;
-        }
+        public int X { get; private set; }
+        public int Y { get; private set; }
 
         public Coordinate(int x, int y)
         {
