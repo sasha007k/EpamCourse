@@ -5,8 +5,8 @@ namespace Task_1
 {
     public class Rectangle
     {
-        private Coordinate leftUpCoord;
-        private Coordinate rightDownCoord;
+        private readonly Coordinate leftUpCoord;
+        private readonly Coordinate rightDownCoord;
 
         public Rectangle(Coordinate leftUpCoord, Coordinate rightDownCoord)
         {

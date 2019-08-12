@@ -3,8 +3,8 @@
     public class ComplexNumber
     {
         #region Fields
-        private double real;
-        private double imaginary;
+        private readonly double real;
+        private readonly double imaginary;
         #endregion
 
         #region Constructors
