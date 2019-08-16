@@ -1,4 +1,5 @@
 ﻿using HomeWork_1;
+using HomeWork_2;
 using System;
 
 namespace RunHomeWorks
@@ -7,7 +8,13 @@ namespace RunHomeWorks
     {
         static void Main(string[] args)
         {
-            //-------------------- HomeWork 1 ---------------------------
+            //HW1();
+            HW2();            
+        }
+
+        public static void HW1()
+        {
+            Console.WriteLine("-------------------- HomeWork 1 ---------------------------"); //HomeWork 1
 
             Console.WriteLine("Task-1 (HW - 1)"); // Task - 1
 
@@ -27,7 +34,7 @@ namespace RunHomeWorks
 
             Coordinate rightDownCoordinate = new Coordinate(rightDownX, rightDownY);
 
-            Rectangle rectangle = new Rectangle(leftUpCoordinate, rightDownCoordinate);
+            HomeWork_1.Rectangle rectangle = new HomeWork_1.Rectangle(leftUpCoordinate, rightDownCoordinate);
 
             Console.Write("Perimetr: ");
             Console.WriteLine(rectangle.Perimetr());
@@ -143,6 +150,68 @@ namespace RunHomeWorks
             Console.WriteLine(dividingResult.ToString());
 
             Console.ReadKey();
+        }
+
+        public static void HW2()
+        {
+            Console.WriteLine("-------------------- HomeWork 2 ---------------------------"); //HomeWork 2 
+
+            Console.Write("Input X coordinate: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Input Y coordinate: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Task-1 (HW - 2)"); // Task - 1
+
+            HomeWork_2.Rectangle rectangle1 = new HomeWork_2.Rectangle();
+            rectangle1.Draw();
+
+            Square square1 = new Square();
+            square1.Draw();
+
+            Console.ReadKey();
+
+            Console.WriteLine("Task-2 (HW - 2)"); // Task - 2
+
+            RectangleWithConstructor rectangle2 = new RectangleWithConstructor(x, y);
+            rectangle2.Draw();
+
+            SquareWithConstructor square2 = new SquareWithConstructor(x, y);
+            square2.Draw();
+
+            Console.ReadKey();
+
+            Console.WriteLine("Task-3 (HW - 2)"); // Task - 3
+
+            VirtualMethodBasedFigure figure3 = new VirtualMethodBasedFigure(x, y);
+            figure3.Draw();
+
+            VirtualMethodBasedRectangle rectangle3 = new VirtualMethodBasedRectangle(x, y);
+            rectangle3.Draw();
+
+            VirtualMethodBasedSquare square3 = new VirtualMethodBasedSquare(x, y);
+            square3.Draw();
+
+            Console.ReadKey();
+
+            Console.WriteLine("Task-4 (HW - 2)"); // Task - 4
+
+            InterfaceBasedFigure figure4 = new InterfaceBasedFigure(x, y);
+            InterfaceBasedRectangle rectangle4 = new InterfaceBasedRectangle(x, y);
+            InterfaceBasedSquare square4 = new InterfaceBasedSquare(x, y);
+
+            DrawAll(figure4, rectangle4, square4);
+
+            Console.ReadKey();
+        }
+
+        public static void DrawAll(params IDrawable[] array)
+        {
+            foreach (var item in array)
+            {
+                item.Draw();
+            }
         }
     }
 }

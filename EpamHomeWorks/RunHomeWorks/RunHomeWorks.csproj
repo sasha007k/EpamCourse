@@ -36,6 +36,9 @@
     <Reference Include="HomeWork_1">
       <HintPath>..\HomeWork_1\bin\Debug\HomeWork_1.dll</HintPath>
     </Reference>
+    <Reference Include="HomeWork_2">
+      <HintPath>..\HomeWork_2\bin\Debug\HomeWork_2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
