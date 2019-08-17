@@ -12,6 +12,24 @@ namespace RunHomeWorks
             RunSecondHomeWork();            
         }
 
+        public static void InputUserData(out int inputData, string text)
+        {
+            while (!int.TryParse(Console.ReadLine(), out inputData))
+            {
+                Console.WriteLine("Value is not correct. Try again");
+                Console.Write(text);
+            }
+        }
+
+        public static void InputUserData(out double inputData, string text)
+        {
+            while (!double.TryParse(Console.ReadLine(), out inputData))
+            {
+                Console.WriteLine("Value is not correct. Try again");
+                Console.Write(text);
+            }
+        }
+
         public static void RunFirstHomeWork()
         {
             Console.WriteLine("-------------------- HomeWork 1 ---------------------------"); //HomeWork 1
@@ -19,20 +37,18 @@ namespace RunHomeWorks
             Console.WriteLine("Task-1 (HW - 1)"); // Task - 1
 
             Console.Write("Input left up X coordinate: ");
-            int leftUpX = Convert.ToInt32(Console.ReadLine());
-            //if (!(int.TryParse(Console.ReadLine(), out int leftUpX)))
-            //{}
+            InputUserData(out int leftUpX, "Input left up X coordinate: ");
 
             Console.Write("Input left up Y coordinate: ");
-            int leftUpY = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int leftUpY, "Input left up Y coordinate: ");
 
             Coordinate leftUpCoordinate = new Coordinate(leftUpX, leftUpY);
 
             Console.Write("Input rigt down X coordinate: ");
-            int rightDownX = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int rightDownX, "Input rigt down X coordinate: ");
 
             Console.Write("Input right down Y coordinate: ");
-            int rightDownY = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int rightDownY, "Input rigt down Y coordinate: ");
 
             Coordinate rightDownCoordinate = new Coordinate(rightDownX, rightDownY);
 
@@ -49,18 +65,17 @@ namespace RunHomeWorks
             Console.WriteLine("Task-2 (HW - 2)"); // Task - 2
 
             Console.Write("Input left up X coordinate: ");
-            int leftUpX2 = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int leftUpX2, "Input left up X coordinate: ");
 
             Console.Write("Input left up Y coordinate: ");
-            int leftUpY2 = Convert.ToInt32(Console.ReadLine());
-
+            InputUserData(out int leftUpY2, "Input left up Y coordinate: ");
             Coordinate leftUpCoordinate2 = new Coordinate(leftUpX2, leftUpY2);
 
             Console.Write("Input rigt down X coordinate: ");
-            int rightDownX2 = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int rightDownX2, "Input rigt down X coordinate: ");
 
             Console.Write("Input right down Y coordinate: ");
-            int rightDownY2 = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int rightDownY2, "Input rigt down Y coordinate: ");
 
             Coordinate rightDownCoordinate2 = new Coordinate(rightDownX2, rightDownY2);
 
@@ -79,7 +94,7 @@ namespace RunHomeWorks
             Circle circle = new Circle();
 
             Console.Write("Input radius: ");
-            double radius = Convert.ToDouble(Console.ReadLine());
+            InputUserData(out double radius, "Input radius: ");
 
             Console.Write("Square = ");
             Console.WriteLine(circle.Square(radius));
@@ -93,18 +108,18 @@ namespace RunHomeWorks
 
             //Test static class Rectangle
             Console.Write("Input left up X coordinate: ");
-            int leftUpX4 = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int leftUpX4, "Input left up X coordinate: ");
 
             Console.Write("Input left up Y coordinate: ");
-            int leftUpY4 = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int leftUpY4, "Input left up Y coordinate: ");
 
             Coordinate leftUpCoordinate4 = new Coordinate(leftUpX4, leftUpY4);
 
             Console.Write("Input rigt down X coordinate: ");
-            int rightDownX4 = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int rightDownX4, "Input rigt down X coordinate: ");
 
             Console.Write("Input right down Y coordinate: ");
-            int rightDownY4 = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int rightDownY4, "Input rigt down Y coordinate: ");
 
             Coordinate rightDownCoordinate4 = new Coordinate(rightDownX4, rightDownY4);
 
@@ -117,7 +132,7 @@ namespace RunHomeWorks
             //Test static class Circle
 
             Console.Write("Input radius: ");
-            double radius4 = Convert.ToDouble(Console.ReadLine());
+            InputUserData(out double radius4, "Input radius: ");
 
             Console.Write("Square = ");
             Console.WriteLine(StaticCircle.Square(radius4));
@@ -130,18 +145,18 @@ namespace RunHomeWorks
             Console.WriteLine("Task-5 (HW - 5)"); // Task - 5
 
             Console.Write("Input real part: ");
-            double realFirst = Convert.ToDouble(Console.ReadLine());
+            InputUserData(out double realFirst, "Input real part: ");
 
             Console.Write("Input imaginary part: ");
-            double imaginaryFirst = Convert.ToDouble(Console.ReadLine());
+            InputUserData(out double imaginaryFirst, "Input imaginary part: ");
 
             ComplexNumber firstComplex = new ComplexNumber(realFirst, imaginaryFirst);
 
             Console.Write("Input real part: ");
-            double realSecond = Convert.ToDouble(Console.ReadLine());
+            InputUserData(out double realSecond, "Input real part: ");
 
             Console.Write("Input imaginary part: ");
-            double imaginarySecond = Convert.ToDouble(Console.ReadLine());
+            InputUserData(out double imaginarySecond, "Input imaginary part: ");
 
             ComplexNumber secondComplex = new ComplexNumber(realSecond, imaginarySecond);
 
@@ -159,10 +174,10 @@ namespace RunHomeWorks
             Console.WriteLine("-------------------- HomeWork 2 ---------------------------"); //HomeWork 2 
 
             Console.Write("Input X coordinate: ");
-            int x = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int x, "Input X coordinate: ");
 
             Console.Write("Input Y coordinate: ");
-            int y = Convert.ToInt32(Console.ReadLine());
+            InputUserData(out int y, "Input Y coordinate: ");
 
             Console.WriteLine("Task-1 (HW - 2)"); // Task - 1
 
