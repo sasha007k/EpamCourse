@@ -1,6 +1,6 @@
-﻿using HomeWork_1;
+﻿using System;
+using HomeWork_1;
 using HomeWork_2;
-using System;
 
 namespace RunHomeWorks
 {
@@ -8,8 +8,8 @@ namespace RunHomeWorks
     {
         static void Main(string[] args)
         {
-            //HW1();
-            HW2();            
+            HW1();
+            //HW2();            
         }
 
         public static void HW1()

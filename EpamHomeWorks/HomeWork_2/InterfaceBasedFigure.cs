@@ -4,8 +4,8 @@ namespace HomeWork_2
 {
     public class InterfaceBasedFigure : IDrawable
     {
-        protected readonly int X;
-        protected readonly int Y;
+        protected int X { get; }
+        protected int Y { get; }
 
         public InterfaceBasedFigure(int x, int y)
         {

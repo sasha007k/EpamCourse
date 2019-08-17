@@ -4,8 +4,8 @@ namespace HomeWork_2
 {
     public class VirtualMethodBasedFigure
     {
-        protected readonly int X;
-        protected readonly int Y;
+        protected int X { get; }
+        protected int Y { get; }
 
         public VirtualMethodBasedFigure(int x, int y)
         {

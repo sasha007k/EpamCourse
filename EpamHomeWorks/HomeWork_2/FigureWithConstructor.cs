@@ -2,8 +2,8 @@
 {
     public abstract class FigureWithConstructor
     {
-        protected readonly int X;
-        protected readonly int Y;
+        protected int X { get; }
+        protected int Y { get; }
 
         protected FigureWithConstructor(int x, int y)
         {
