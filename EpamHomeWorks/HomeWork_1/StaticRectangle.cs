@@ -6,12 +6,6 @@ namespace HomeWork_1
     {
         private static Tuple<double, double> CountTwoSides(Coordinate leftUpCoord, Coordinate rightDownCoord)
         {
-            //double oneSide = MathHelper.SquareRoot((RightDownCoord.X - LeftUpCoord.X) * (RightDownCoord.X - LeftUpCoord.X) +
-            //    (LeftUpCoord.Y - LeftUpCoord.Y) * (LeftUpCoord.Y - LeftUpCoord.Y));
-
-            //double secondSide = MathHelper.SquareRoot((LeftUpCoord.X - LeftUpCoord.X) * (LeftUpCoord.X - LeftUpCoord.X) +
-            //    (RightDownCoord.Y - LeftUpCoord.Y) * (RightDownCoord.Y - LeftUpCoord.Y))ж
-
             double oneSide = MathHelper.SquareRoot((rightDownCoord.X - leftUpCoord.X) * (rightDownCoord.X - leftUpCoord.X));
             double secondSide = MathHelper.SquareRoot((rightDownCoord.Y - leftUpCoord.Y) * (rightDownCoord.Y - leftUpCoord.Y));
 

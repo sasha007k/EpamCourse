@@ -8,11 +8,11 @@ namespace RunHomeWorks
     {
         static void Main(string[] args)
         {
-            HW1();
-            //HW2();            
+            RunFirstHomeWork();
+            RunSecondHomeWork();            
         }
 
-        public static void HW1()
+        public static void RunFirstHomeWork()
         {
             Console.WriteLine("-------------------- HomeWork 1 ---------------------------"); //HomeWork 1
 
@@ -20,6 +20,8 @@ namespace RunHomeWorks
 
             Console.Write("Input left up X coordinate: ");
             int leftUpX = Convert.ToInt32(Console.ReadLine());
+            //if (!(int.TryParse(Console.ReadLine(), out int leftUpX)))
+            //{}
 
             Console.Write("Input left up Y coordinate: ");
             int leftUpY = Convert.ToInt32(Console.ReadLine());
@@ -107,10 +109,10 @@ namespace RunHomeWorks
             Coordinate rightDownCoordinate4 = new Coordinate(rightDownX4, rightDownY4);
 
             Console.Write("Perimetr: ");
-            Console.WriteLine(StaticRectangle.Perimetr(leftUpCoordinate, rightDownCoordinate));
+            Console.WriteLine(StaticRectangle.Perimetr(leftUpCoordinate4, rightDownCoordinate4));
 
             Console.Write("Square: ");
-            Console.WriteLine(StaticRectangle.Square(leftUpCoordinate, rightDownCoordinate));
+            Console.WriteLine(StaticRectangle.Square(leftUpCoordinate4, rightDownCoordinate4));
 
             //Test static class Circle
 
@@ -118,10 +120,10 @@ namespace RunHomeWorks
             double radius4 = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Square = ");
-            Console.WriteLine(StaticCircle.Square(radius));
+            Console.WriteLine(StaticCircle.Square(radius4));
 
             Console.Write("Length = ");
-            Console.WriteLine(StaticCircle.Length(radius));
+            Console.WriteLine(StaticCircle.Length(radius4));
 
             Console.ReadKey();
 
@@ -152,7 +154,7 @@ namespace RunHomeWorks
             Console.ReadKey();
         }
 
-        public static void HW2()
+        public static void RunSecondHomeWork()
         {
             Console.WriteLine("-------------------- HomeWork 2 ---------------------------"); //HomeWork 2 
 
