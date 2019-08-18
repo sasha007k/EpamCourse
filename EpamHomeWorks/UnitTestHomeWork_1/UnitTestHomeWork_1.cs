@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestHomeWork_1
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestHomeWork_1
     {
         [TestMethod]
         public void TestRectanglePerimetr()
@@ -13,8 +13,8 @@ namespace UnitTestHomeWork_1
             Coordinate leftUpCoordinate = new Coordinate(0, 3);
             Coordinate rightDownCoordinate = new Coordinate(3, 0);
             Rectangle rectangle = new Rectangle(leftUpCoordinate, rightDownCoordinate);
-            var expected = 12;
-            var actual = rectangle.Perimetr();
+            double expected = 12;
+            double actual = rectangle.Perimetr();
 
             Assert.AreEqual(expected, actual);
         }
@@ -25,8 +25,8 @@ namespace UnitTestHomeWork_1
             Coordinate leftUpCoordinate = new Coordinate(0, 3);
             Coordinate rightDownCoordinate = new Coordinate(3, 0);
             Rectangle rectangle = new Rectangle(leftUpCoordinate, rightDownCoordinate);
-            var expected = 9;
-            var actual = rectangle.Square();
+            double expected = 9;
+            double actual = rectangle.Square();
 
             Assert.AreEqual(expected, actual);
         }
@@ -35,8 +35,8 @@ namespace UnitTestHomeWork_1
         public void TestSircleSquare()
         {
             Circle circle = new Circle();
-            var expected = 153.93804002591;
-            var actual = circle.Square(7);
+            double expected = 153.93804002591;
+            double actual = circle.Square(7);
 
 
             Assert.AreEqual(expected, actual);
@@ -46,8 +46,8 @@ namespace UnitTestHomeWork_1
         public void TestSircleLength()
         {
             Circle circle = new Circle();
-            var expected = 43.98229715026;
-            var actual = circle.Length(7);
+            double expected = 43.98229715026;
+            double actual = circle.Length(7);
 
             Assert.AreEqual(expected, actual);
         }
@@ -55,8 +55,8 @@ namespace UnitTestHomeWork_1
         [TestMethod]
         public void TestSquareRoot()
         {
-            var expected = 5;
-            var actual = MathHelper.SquareRoot(25);
+            double expected = 5;
+            double actual = MathHelper.SquareRoot(25);
 
             Assert.AreEqual(expected, actual);
 
@@ -79,8 +79,8 @@ namespace UnitTestHomeWork_1
 
             PropertyBasedRectangle rectangle2 = new PropertyBasedRectangle(leftUpCoordinate2, rightDownCoordinate2);
 
-            var expected = 28;
-            var actual = rectangle2.Perimetr;
+            double expected = 28;
+            double actual = rectangle2.Perimetr;
 
             Assert.AreEqual(expected, actual);
 
@@ -98,8 +98,8 @@ namespace UnitTestHomeWork_1
 
             ComplexNumber multiplyingResult = firstComplex * secondComplex;
 
-            var expected = new ComplexNumber(30, 56); ;
-            var actual = multiplyingResult;            
+            ComplexNumber expected = new ComplexNumber(30, 56); ;
+            ComplexNumber actual = multiplyingResult;            
 
             Assert.ReferenceEquals(expected, actual);
         }
