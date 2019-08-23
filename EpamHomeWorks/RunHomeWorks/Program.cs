@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using HomeWork_1;
 using HomeWork_2;
+using HomeWork_3;
 
 namespace RunHomeWorks
 {
@@ -8,8 +10,9 @@ namespace RunHomeWorks
     {
         static void Main(string[] args)
         {
-            RunFirstHomeWork();
-            RunSecondHomeWork();            
+            //RunFirstHomeWork();
+            //RunSecondHomeWork();
+            RunThirdHomeWork();
         }
 
         public static void InputUserData(out int inputData, string text)
@@ -222,6 +225,36 @@ namespace RunHomeWorks
 
             Console.ReadKey();
         }
+
+        public static void RunThirdHomeWork()
+        {
+            Console.WriteLine("-------------------- HomeWork 3 ---------------------------"); //HomeWork 3
+
+            PersonManager personManager = new PersonManager();
+
+            Console.WriteLine("Task-1 (HW - 3)"); // Task - 1                  
+            personManager.DisplayAgeAndName();
+
+            Console.WriteLine("Task-2 (HW - 3)"); // Task - 2
+            personManager.UseAddRangeMethodAndDisplay();
+
+            Console.WriteLine("Task-3 (HW - 3)"); // Task - 3
+
+            RandomDataManager randomDataManager = new RandomDataManager();
+            randomDataManager.BeforeTransformation();
+            randomDataManager.AfterTransformation();            
+
+            Console.Write("Input page number: ");
+            int page;
+            while (!int.TryParse(Console.ReadLine(), out page))
+            {
+                return;
+            }
+
+            randomDataManager.DisplayPage(page);
+
+            Console.ReadKey();
+        }       
 
         public static void DrawAll(params IDrawable[] array)
         {
