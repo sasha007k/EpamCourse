@@ -1,39 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace HomeWork_3
 {
     // Task 3
     public class RandomDataManager
     {
-        public List<string> randomStr = new List<string>();
-
-        private int CountListLength()
-        {
-            int length = 0;
-            foreach (var w in randomStr)
-            {
-                length++;
-            }
-
-            return length;
-        }
+        private List<string> randomStr = new List<string>();
 
         public void BeforeTransformation()
         {
             Random random = new Random();
-            string randWord;
+            StringBuilder builder = new StringBuilder();
             for (int i = 0; i < 77777; i++)
             {
-                randWord = "";
+                builder.Clear();
                 for (int j = 0; j < 4; j++)
                 {
-                    randWord += Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                    builder.Append(Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65))));
                 }
-                randomStr.Add(randWord);
-            }            
-
-            Console.WriteLine("Before transformation length = " + CountListLength());
+                randomStr.Add(builder.ToString());
+            }
+            Console.WriteLine("Before transformation length = " + randomStr.Count);
         }
 
         public void AfterTransformation()
@@ -41,24 +30,24 @@ namespace HomeWork_3
             HashSet<string> uniqueStrings = new HashSet<string>(randomStr);
             randomStr = new List<string>(uniqueStrings);
 
-            foreach (var w in randomStr.ToArray())
+            for (int i = 0; i < randomStr.Count; i++)
             {
-                if (w.StartsWith("Z"))
+                if (randomStr[i].StartsWith("Z"))
                 {
-                    randomStr.Remove(w);
+                    randomStr.Remove(randomStr[i]);
                 }
             }
-
+            
             randomStr.Sort();
             randomStr.Reverse();            
 
-            Console.WriteLine("After transformation length = " + CountListLength());
+            Console.WriteLine("After transformation length = " + randomStr.Count);
         }
 
         public void DisplayPage(int pageNumber)
         {
             const int itemsOnPage = 5;
-            int length = CountListLength() / itemsOnPage;
+            int length = randomStr.Count / itemsOnPage;
             if (pageNumber <= 0 || pageNumber > length)
             {
                 Console.WriteLine("No such page");

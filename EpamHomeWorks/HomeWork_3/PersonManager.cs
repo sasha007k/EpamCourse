@@ -6,7 +6,7 @@ namespace HomeWork_3
     // Tasks 1 and 2
     public class PersonManager
     {
-        public List<Person> people = new List<Person>()
+        private readonly List<Person> people = new List<Person>()
         {
             new Person(){ Name="John", Age=21, PhoneNumbers=new List<string>() { "0971111111", "0972222222", "0973333333" } },
             new Person(){ Name="Jack", Age=18, PhoneNumbers=new List<string>() { "0974444444", "0975555555", "0976666666" } },
@@ -22,7 +22,7 @@ namespace HomeWork_3
         {
             foreach (var p in people)
             {
-                Console.WriteLine($"Name={p.Name}  Age={p.Age}");
+                Console.WriteLine($"Name: {p.Name}  Age: {p.Age}");
             }
         }
 

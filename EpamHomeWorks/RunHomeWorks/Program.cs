@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using HomeWork_1;
 using HomeWork_2;
 using HomeWork_3;
@@ -245,8 +244,8 @@ namespace RunHomeWorks
             randomDataManager.AfterTransformation();            
 
             Console.Write("Input page number: ");
-            int page;
-            while (!int.TryParse(Console.ReadLine(), out page))
+            bool isSuccessfullParse = int.TryParse(Console.ReadLine(), out int page);
+            if (!isSuccessfullParse)
             {
                 return;
             }
