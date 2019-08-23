@@ -28,16 +28,17 @@ namespace HomeWork_3
         public void AfterTransformation()
         {
             HashSet<string> uniqueStrings = new HashSet<string>(randomStr);
-            randomStr = new List<string>(uniqueStrings);
+            List<string> uniquesAndWithoutLetterZ = new List<string>();
 
-            for (int i = 0; i < randomStr.Count; i++)
+            foreach (var s in uniqueStrings)
             {
-                if (randomStr[i].StartsWith("Z"))
+                if (!s.StartsWith("Z"))
                 {
-                    randomStr.Remove(randomStr[i]);
-                }
+                    uniquesAndWithoutLetterZ.Add(s);
+                }                
             }
-            
+
+            randomStr = uniquesAndWithoutLetterZ;
             randomStr.Sort();
             randomStr.Reverse();            
 

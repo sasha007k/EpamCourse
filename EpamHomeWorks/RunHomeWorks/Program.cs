@@ -34,7 +34,7 @@ namespace RunHomeWorks
 
         public static void RunFirstHomeWork()
         {
-            Console.WriteLine("-------------------- HomeWork 1 ---------------------------"); //HomeWork 1
+            Console.WriteLine("-------------------- HomeWork 1 ---------------------------"); // HomeWork 1
 
             Console.WriteLine("Task-1 (HW - 1)"); // Task - 1
 
@@ -173,7 +173,7 @@ namespace RunHomeWorks
 
         public static void RunSecondHomeWork()
         {
-            Console.WriteLine("-------------------- HomeWork 2 ---------------------------"); //HomeWork 2 
+            Console.WriteLine("-------------------- HomeWork 2 ---------------------------"); // HomeWork 2 
 
             Console.Write("Input X coordinate: ");
             InputUserData(out int x, "Input X coordinate: ");
@@ -227,7 +227,7 @@ namespace RunHomeWorks
 
         public static void RunThirdHomeWork()
         {
-            Console.WriteLine("-------------------- HomeWork 3 ---------------------------"); //HomeWork 3
+            Console.WriteLine("-------------------- HomeWork 3 ---------------------------"); // HomeWork 3
 
             PersonManager personManager = new PersonManager();
 
