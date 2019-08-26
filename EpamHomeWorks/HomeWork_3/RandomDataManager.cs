@@ -48,8 +48,8 @@ namespace HomeWork_3
         public void DisplayPage(int pageNumber)
         {
             const int itemsOnPage = 5;
-            int length = randomStr.Count / itemsOnPage;
-            if (pageNumber <= 0 || pageNumber > length)
+            int numberOfPages = randomStr.Count / itemsOnPage;
+            if (pageNumber <= 0 || pageNumber > numberOfPages)
             {
                 Console.WriteLine("No such page");
                 return;
