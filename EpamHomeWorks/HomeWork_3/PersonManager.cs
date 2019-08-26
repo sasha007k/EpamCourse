@@ -29,10 +29,11 @@ namespace HomeWork_3
         // Task 2
         public void UseAddRangeMethodAndDisplay()
         {
-            Person[] twoPeopleMore = new Person[2];
-            twoPeopleMore[0] = new Person() { Name = "Alex", Age = 25, PhoneNumbers = new List<string>() { "0971435911", "0972254322", "0973335433" } };
-            twoPeopleMore[1] = new Person() { Name = "Andrew", Age = 33, PhoneNumbers = new List<string>() { "0971563511", "0975635222", "0973337685" } };
-
+            Person[] twoPeopleMore =
+                {
+                    new Person() { Name = "Alex", Age = 25, PhoneNumbers = new List<string>() { "0971435911", "0972254322", "0973335433" } },
+                    new Person() { Name = "Andrew", Age = 33, PhoneNumbers = new List<string>() { "0971563511", "0975635222", "0973337685" } }
+                };
             people.AddRange(twoPeopleMore);
 
             foreach (var p in people)

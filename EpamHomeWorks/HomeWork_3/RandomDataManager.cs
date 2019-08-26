@@ -13,7 +13,7 @@ namespace HomeWork_3
         {
             Random random = new Random();
             StringBuilder builder = new StringBuilder();
-            for (int i = 0; i < 77777; i++)
+            for (int i = 0; i < 107; i++)
             {
                 builder.Clear();
                 for (int j = 0; j < 4; j++)
@@ -22,7 +22,7 @@ namespace HomeWork_3
                 }
                 randomStr.Add(builder.ToString());
             }
-            Console.WriteLine("Before transformation length = " + randomStr.Count);
+            Console.WriteLine($"Before transformation length = {randomStr.Count}");
         }
 
         public void AfterTransformation()
@@ -42,13 +42,13 @@ namespace HomeWork_3
             randomStr.Sort();
             randomStr.Reverse();            
 
-            Console.WriteLine("After transformation length = " + randomStr.Count);
+            Console.WriteLine($"After transformation length = {randomStr.Count}");
         }
 
         public void DisplayPage(int pageNumber)
         {
             const int itemsOnPage = 5;
-            int numberOfPages = randomStr.Count / itemsOnPage;
+            int numberOfPages = (int)Math.Ceiling((double)randomStr.Count / itemsOnPage);
             if (pageNumber <= 0 || pageNumber > numberOfPages)
             {
                 Console.WriteLine("No such page");
