@@ -30,7 +30,7 @@
         #region Methods
         public override string ToString()
         {
-            return "Real = " + real + "   imaginary = " + imaginary;
+            return $"Real = {real}   imaginary = {imaginary}";
         }
         #endregion
     }
